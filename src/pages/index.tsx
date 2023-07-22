@@ -63,29 +63,43 @@ export default function Home() {
           </p>
 
           <div className="w-full max-w-3xl">
-            {cv.map(({ company, jobDescription, period, current }, idx) => (
-              <WorkRow
-                key={"work-row-" + idx}
-                company={company}
-                jobDescription={jobDescription}
-                period={period}
-                current={current}
-              />
-            ))}
+            {cv.map(
+              (
+                {
+                  company,
+                  jobDescription,
+                  period,
+                  current,
+                  childElement,
+                  parentElement,
+                },
+                idx
+              ) => (
+                <WorkRow
+                  key={"work-row-" + idx}
+                  company={company}
+                  jobDescription={jobDescription}
+                  period={period}
+                  current={current}
+                  childElement={childElement}
+                  parentElement={parentElement}
+                />
+              )
+            )}
           </div>
 
           <p className="ml-2 bg-gradient-to-r from-amber-400 via-red-500 to-pink-400 rounded-full px-2 py-1 text-xs text-white tracking-wide mb-6  mt-20">
             PERSONAL
           </p>
           <div className="w-full max-w-3xl">
-            <div className="flex flex-row justify-start align-baseline gap-6 px-4 pt-3 pb-2 w-full rounded-md hover:bg-slate-50 transition-all hover:transition-all hover:cursor-pointer">
+            <div className="flex flex-row justify-start items-center gap-6 px-4 pt-3 pb-2 w-full rounded-md hover:bg-slate-50 transition-all hover:transition-all hover:cursor-pointer">
               <a
                 href="https://homebaristacollective.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full"
               >
-                <div className="flex flex-row justify-start align-baseline gap-8 w-full">
+                <div className="flex flex-row justify-start gap-8 w-full">
                   <Image
                     src="/wonky_small.svg"
                     width={30}

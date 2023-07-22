@@ -3,16 +3,23 @@
     "company": "360dialog",
     "jobDescription": "Product Manager & UX/UI Lead",
     "period": "2020 —  ",
-    "current": true
+    "current": true,
+    "parentElement": true
+  },
+  {
+    "company": "360dialog",
+    "jobDescription": "UX/UI Engineer & Frontend Team Lead",
+    "period": "2020 — 21",
+    "childElement": true
   },
   {
     "company": "Divizend",
-    "jobDescription": "Product Designer & Frontend Engineer",
+    "jobDescription": "UX/UI Engineer",
     "period": "2018 — 20"
   },
   {
     "company": "CDF Technologies",
-    "jobDescription": "Co-Founder & CTO",
+    "jobDescription": "Co-Founder",
     "period": "2018 — 20"
   },
   {
