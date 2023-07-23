@@ -216,11 +216,11 @@ const WorkRow = ({ data }: IWorkRow) => {
                       you an email with all of the details of your order.
                     </p>
                   </div>
-                  <div className="absolute bottom-8 left-8 right-8 flex flex-row gap-2">
+                  <div className="absolute bottom-8 left-8 right-8 flex flex-col sm:flex-row gap-3">
                     {fetchPrev() ? (
                       <button
                         onClick={showPrev}
-                        className="flex flex-row w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer"
+                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -236,19 +236,19 @@ const WorkRow = ({ data }: IWorkRow) => {
                             d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
                           />
                         </svg>
-                        <span className="ml-4">
+                        <span className="ml-4 max-w-[80%]">
                           {fetchPrev()?.jobDescription} @ {fetchPrev()?.company}
                         </span>
                       </button>
                     ) : (
-                      <div className="h-1 opacity-0 w-1/2"></div>
+                      <div className="h-1 opacity-0 w-full sm:w-1/2"></div>
                     )}
                     {fetchNext() && (
                       <button
                         onClick={showNext}
-                        className="flex flex-row w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer"
+                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer"
                       >
-                        <span className="mr-4">
+                        <span className="mr-4 max-w-[80%]">
                           {fetchNext()?.jobDescription} @ {fetchNext()?.company}
                         </span>
                         <svg
