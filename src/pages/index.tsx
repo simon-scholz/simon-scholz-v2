@@ -59,24 +59,12 @@ export default function Home() {
           <div className="w-full max-w-3xl flex flex-col gap-8 md:gap-0">
             {cv.map(
               (
-                {
-                  company,
-                  jobDescription,
-                  period,
-                  current,
-                  childElement,
-                  parentElement,
-                },
+                data,
                 idx
               ) => (
                 <WorkRow
                   key={"work-row-" + idx}
-                  company={company}
-                  jobDescription={jobDescription}
-                  period={period}
-                  current={current}
-                  childElement={childElement}
-                  parentElement={parentElement}
+                  data={data}
                 />
               )
             )}

@@ -1,24 +1,52 @@
 import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-interface IWorkRow {
+import cv from "../data/cv.json";
+
+type RowData = {
   company: string;
   jobDescription?: string;
   period?: string;
   current?: boolean;
   childElement?: boolean;
   parentElement?: boolean;
+};
+
+interface IWorkRow {
+  data: RowData;
 }
 
-const WorkRow = ({
-  company,
-  jobDescription,
-  period,
-  current,
-  childElement,
-  parentElement,
-}: IWorkRow) => {
-      let [isOpen, setIsOpen] = useState(false);
+const WorkRow = ({ data }: IWorkRow) => {
+  let [isOpen, setIsOpen] = useState(false);
+  const [currentDataView, setCurrentDataView] = useState<RowData>(data)
+  const {
+    company,
+    jobDescription,
+    period,
+    current,
+    childElement,
+    parentElement,
+  } = data;
+
+  const showPrev = () => {
+    let currentIdx = cv.findIndex((v) => v === currentDataView);
+    setCurrentDataView(cv[currentIdx - 1])
+  }
+
+  const showNext = () => {
+    let currentIdx = cv.findIndex((v) => v === currentDataView);
+    setCurrentDataView(cv[currentIdx + 1]);
+  };
+
+  const fetchPrev = () => {
+    let currentIdx = cv.findIndex(v => v === currentDataView)
+    return currentIdx !== 0 ? cv[currentIdx - 1] : undefined;
+  };
+
+  const fetchNext = () => {
+    let currentIdx = cv.findIndex((v) => v === currentDataView);
+    return currentIdx !== cv.length - 1 ? cv[currentIdx + 1] : undefined;
+  };
 
   return (
     <div>
@@ -177,16 +205,68 @@ const WorkRow = ({
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    {company}
+                    {currentDataView.company}
                   </Dialog.Title>
                   <p className="text-gray-600 min-w-fit grow-0 pt-2 mb-6">
-                    {jobDescription}
+                    {currentDataView.jobDescription}
                   </p>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
                       Your payment has been successfully submitted. We've sent
                       you an email with all of the details of your order.
                     </p>
+                  </div>
+                  <div className="absolute bottom-8 left-8 right-8 flex flex-row gap-2">
+                    {fetchPrev() ? (
+                      <button
+                        onClick={showPrev}
+                        className="flex flex-row w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-5 h-5 absolute left-4"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+                          />
+                        </svg>
+                        <span className="ml-4">
+                          {fetchPrev()?.jobDescription} @ {fetchPrev()?.company}
+                        </span>
+                      </button>
+                    ) : (
+                      <div className="h-1 opacity-0 w-1/2"></div>
+                    )}
+                    {fetchNext() && (
+                      <button
+                        onClick={showNext}
+                        className="flex flex-row w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer"
+                      >
+                        <span className="mr-4">
+                          {fetchNext()?.jobDescription} @ {fetchNext()?.company}
+                        </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-5 h-5  absolute right-4"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                          />
+                        </svg>
+                      </button>
+                    )}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
