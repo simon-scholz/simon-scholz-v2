@@ -35,34 +35,28 @@ export default function Home() {
       </Head>
 
       <main
-        className={`bg-white flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+        className={`bg-white flex min-h-screen flex-col items-center justify-between p-10 md:p-24 ${inter.className}`}
       >
         <div className="flex flex-col items-start w-full max-w-3xl">
           <div className="px-2">
             <h2 className="font-semibold text-gray-900">Hey, I'm Simon</h2>
-            <p className="text-base tracking-wide pt-2 text-gray-900">
-              I design, build, and ship digital products. Right now I'm a
-              product manager and UX/UI lead at 360dialog, a global Facebook
-              business solution provider, enabling companies of all sizes and
+            <p className="text-base tracking-normal pt-2 text-gray-900">
+              I design, build, and ship digital products. With 8+ years of
+              experience I've proven to bring products from zero to  
+              <br/>As a generalist, driven by societal impact and technological advancements, I never stop learning.
+            </p>
+            {/* <p className="text-base tracking-normal pt-2 text-gray-900">
+              I design, build, and ship digital products. Right now I'm leading
+              product at 360dialog, enabling companies of all sizes and
               from all over the world to use WhatsApp.
-            </p>
-            <p className="text-base tracking-wide pt-2 text-gray-900">
-              I've previously co-founded CDF Technologies, where I led the
-              design and creative direction of multiple B2B FinTech products and
-              design systems.
-            </p>
-            <p className="text-base tracking-wide pt-2 text-gray-900">
-              Before CDF I worked as an automotive engineer, specializing in
-              thermal and mechanical load collective simulation of powertrain
-              components.
-            </p>
+            </p> */}
           </div>
 
           <p className="bg-gray-800 rounded-full ml-2 px-2 py-1 text-xs text-white tracking-wide mb-6 mt-20">
             WORK
           </p>
 
-          <div className="w-full max-w-3xl">
+          <div className="w-full max-w-3xl flex flex-col gap-8 md:gap-0">
             {cv.map(
               (
                 {

@@ -24,7 +24,7 @@ const WorkRow = ({
     <div>
       <div
         onClick={() => setIsOpen(true)}
-        className="flex flex-row justify-start items-center gap-6 px-4 py-2 w-full rounded-md hover:bg-slate-50 transition-all hover:transition-all hover:cursor-pointer"
+        className={`flex flex-row justify-start items-start md:items-center gap-6 px-4 py-2 w-full rounded-md hover:bg-slate-50 transition-all hover:transition-all hover:cursor-pointer`}
       >
         <div className="text-slate-400 font-medium min-w-fit grow-0">
           {parentElement ? (
@@ -43,7 +43,7 @@ const WorkRow = ({
               />
             </svg>
           ) : childElement ? (
-            <div className="w-5 h-5 opacity-0"></div>
+            <div className="w-5 h-0 md:h-5 opacity-0"></div>
           ) : (
             // <svg
             //   xmlns="http://www.w3.org/2000/svg"
@@ -76,16 +76,19 @@ const WorkRow = ({
           )}
         </div>
 
-        {!childElement ? (
-          <p className="text-gray-900 font-medium min-w-fit grow-0">
-            {company}
-          </p>
-        ) : (
-          <div className="relative text-slate-400 font-medium min-w-fit grow-0">
-            <p className="text-gray-200 font-medium min-w-fit grow-0 ">
+        <div
+          className={`flex flex-col md:flex-row justify-start items-start md:items-center gap-0 md:gap-6 w-[calc(100%-2.75rem)]`}
+        >
+          {!childElement ? (
+            <p className="text-gray-900 font-medium min-w-fit grow-0">
               {company}
             </p>
-            {/* <svg
+          ) : (
+            <div className="relative text-slate-400 font-medium min-w-fit grow-0">
+              <p className="text-gray-200 font-medium min-w-fit grow-0">
+                {company}
+              </p>
+              {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -99,22 +102,26 @@ const WorkRow = ({
               d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
             />
           </svg> */}
-          </div>
-        )}
-        <p className="overflow-hidden text-gray-200 w-full truncate grow">
-          {".".repeat(500)}
-        </p>
-        <p className="text-gray-600 min-w-fit grow-0">{jobDescription}</p>
-        {!current ? (
-          <p className="text-slate-400 font-jetbrains w-52 min-w-[128px] pl-2 text-right">
-            {period}
+            </div>
+          )}
+
+          <p className="invisible h-0 md:h-auto md:visible overflow-hidden text-gray-200 w-full truncate grow">
+            {".".repeat(500)}
           </p>
-        ) : (
-          <div className="flex flex-row gap-1 items-center min-w-[128px] justify-end">
-            <div className="rounded-full h-2 w-2 bg-emerald-400"></div>
-            <p className="text-slate-400 font-jetbrains pl-2">current</p>
-          </div>
-        )}
+          <p className="text-gray-600 min-w-fit grow-0 pt-2 md:pt-0">
+            {jobDescription}
+          </p>
+          {!current ? (
+            <p className="text-slate-400 font-jetbrains w-52 min-w-[128px] md:pl-2 text-left md:text-right pt-2 md:pt-0">
+              {period}
+            </p>
+          ) : (
+            <div className="flex flex-row gap-1 items-center min-w-[128px] justify-start md:justify-end pt-2 md:pt-0">
+              <div className="rounded-full h-2 w-2 bg-emerald-400"></div>
+              <p className="text-slate-400 font-jetbrains pl-2">current</p>
+            </div>
+          )}
+        </div>
       </div>
 
       <Transition show={isOpen} as={Fragment}>
@@ -125,10 +132,10 @@ const WorkRow = ({
         >
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-300"
+            enter="ease-out duration-500 delay-100"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in duration-200"
+            leave="ease-in duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
@@ -136,18 +143,21 @@ const WorkRow = ({
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex min-h-full items-center justify-center sm:p-4 text-center overflow-hidden">
               <Transition.Child
                 as={Fragment}
-                enter="ease-out duration-200"
-                enterFrom="opacity-0 scale-y-75"
-                enterTo="opacity-100 scale-y-100"
+                enter="transition ease duration-5000 transform sm:duration-300 sm:ease-out"
+                enterFrom="translate-y-50 sm:opacity-0 sm:scale-y-75"
+                enterTo="translate-y-0 sm:opacity-100 scale-y-100"
                 leave="ease-in duration-200"
-                leaveFrom="opacity-100 scale-y-100"
-                leaveTo="opacity-0 scale-y-75"
+                leaveFrom="translate-y-0 sm:opacity-100 sm:scale-y-100"
+                leaveTo="translate-y-100 sm:opacity-0 sm:scale-y-75"
               >
-                <Dialog.Panel className="w-full max-w-3xl min-h-[460px] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all relative">
-                  <button onClick={() => setIsOpen(false)} className="absolute right-3 top-3 p-2 outline-none border-none text-slate-400 rounded-lg hover:bg-slate-50 transition-all hover:transition-all hover:cursor-pointer">
+                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="absolute right-3 top-3 p-2 outline-none border-none text-slate-400 rounded-lg hover:bg-slate-50 transition-all hover:transition-all hover:cursor-pointer"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
