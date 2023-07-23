@@ -39,19 +39,19 @@ export default function Home() {
       >
         <div className="flex flex-col items-start w-full max-w-3xl">
           <div className="px-2">
-            <h2 className="font-semibold">Hey, I'm Simon</h2>
-            <p className="text-base tracking-wide pt-2">
+            <h2 className="font-semibold text-gray-900">Hey, I'm Simon</h2>
+            <p className="text-base tracking-wide pt-2 text-gray-900">
               I design, build, and ship digital products. Right now I'm a
               product manager and UX/UI lead at 360dialog, a global Facebook
               business solution provider, enabling companies of all sizes and
               from all over the world to use WhatsApp.
             </p>
-            <p className="text-base tracking-wide pt-2">
+            <p className="text-base tracking-wide pt-2 text-gray-900">
               I've previously co-founded CDF Technologies, where I led the
               design and creative direction of multiple B2B FinTech products and
               design systems.
             </p>
-            <p className="text-base tracking-wide pt-2">
+            <p className="text-base tracking-wide pt-2 text-gray-900">
               Before CDF I worked as an automotive engineer, specializing in
               thermal and mechanical load collective simulation of powertrain
               components.
