@@ -50,7 +50,9 @@ const Footer = () => {
                 <Menu.Item>
                   {({ active }) => (
                     <button
-                      onClick={(e) => copyToClipboard(e, "simonscholz@outlook.com")}
+                      onClick={(e) =>
+                        copyToClipboard(e, "simonscholz@outlook.com")
+                      }
                       className={`${
                         active
                           ? "text-gray-900 bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
@@ -64,7 +66,7 @@ const Footer = () => {
                           viewBox="0 0 24 24"
                           strokeWidth={2}
                           stroke="currentColor"
-                          className="w-4 h-4 text-gray-600"
+                          className="w-4 h-4 text-gray-600 dark:text-neutral-300"
                         >
                           <path
                             strokeLinecap="round"
@@ -79,7 +81,7 @@ const Footer = () => {
                           viewBox="0 0 24 24"
                           strokeWidth={2}
                           stroke="currentColor"
-                          className="w-4 h-4 text-gray-600"
+                          className="w-4 h-4 text-gray-600 dark:text-neutral-300"
                         >
                           <path
                             strokeLinecap="round"
@@ -88,7 +90,7 @@ const Footer = () => {
                           />
                         </svg>
                       )}
-                      {copied ? "Copied to clipboard!":"Copy address"}
+                      {copied ? "Copied to clipboard!" : "Copy address"}
                     </button>
                   )}
                 </Menu.Item>
@@ -108,7 +110,7 @@ const Footer = () => {
                         viewBox="0 0 24 24"
                         strokeWidth={2}
                         stroke="currentColor"
-                        className="w-4 h-4 text-gray-600"
+                        className="w-4 h-4 text-gray-600 dark:text-neutral-300"
                       >
                         <path
                           strokeLinecap="round"

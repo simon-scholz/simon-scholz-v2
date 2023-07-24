@@ -7,8 +7,21 @@ const inter = Inter({ subsets: ['latin'] })
 
 import cv from "../data/cv.json"
 import Footer from '@/components/Footer';
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [imgSrc, setImgSrc] = useState<string>("/wonky_small.svg");
+  
+
+  useEffect(() => {
+    const storedTheme = window.localStorage.getItem("prefered-theme");
+    if (storedTheme === "darkTheme") {
+      setImgSrc("/wonky_small_dark_bg.svg")
+    } else {
+      setImgSrc("/wonky_small.svg")
+    }
+  }, []);
+
   return (
     <div className="bg-white">
       <Head>
@@ -82,7 +95,7 @@ export default function Home() {
                 <div className="flex flex-row justify-start gap-8 w-full">
                   {/* TO-DO: use src="/wonky_small_dark_bg.svg" for dark mode */}
                   <Image
-                    src="/wonky_small.svg"
+                    src={imgSrc}
                     width={30}
                     height={30}
                     alt="Logo for Home Barista Collective"
