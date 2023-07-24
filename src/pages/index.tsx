@@ -49,10 +49,8 @@ export default function Home() {
       </Head>
 
       <main
-        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 md:p-24 md:pb-0 ${inter.className}`}
+        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 pt-14 md:p-24 md:pb-0 ${inter.className}`}
       >
-             
-        
         <div className="flex flex-col items-start w-full max-w-3xl">
           <div className="px-2">
             <h2 className="font-semibold text-gray-900 dark:text-neutral-50">
@@ -107,7 +105,7 @@ export default function Home() {
                   <p className="overflow-hidden text-gray-200 dark:text-neutral-700 shrink truncate">
                     {".".repeat(500)}
                   </p>
-                  <p className="text-slate-400  font-jetbrains min-w-fit">
+                  <p className="text-slate-400  font-jetbrains min-w-fit text-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

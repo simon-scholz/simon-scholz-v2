@@ -140,13 +140,15 @@ const WorkRow = ({ data }: IWorkRow) => {
             {jobDescription}
           </p>
           {!current ? (
-            <p className="text-slate-400 font-jetbrains w-52 min-w-[128px] md:pl-2 text-left md:text-right pt-2 md:pt-0">
+            <p className="text-slate-400 font-jetbrains w-44 min-w-[100px] md:pl-2 text-left md:text-right pt-2 md:pt-0 text-sm">
               {period}
             </p>
           ) : (
-            <div className="flex flex-row gap-1 items-center min-w-[128px] justify-start md:justify-end pt-2 md:pt-0">
+            <div className="flex flex-row gap-1 items-center min-w-[100px] justify-start md:justify-end pt-2 md:pt-0">
               <div className="rounded-full h-2 w-2 bg-emerald-400"></div>
-              <p className="text-slate-400 font-jetbrains pl-2">current</p>
+              <p className="text-slate-400 font-jetbrains pl-2 text-sm">
+                current
+              </p>
             </div>
           )}
         </div>

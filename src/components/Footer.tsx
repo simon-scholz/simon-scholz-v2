@@ -24,7 +24,7 @@ const Footer = () => {
     }, [copied]);
 
     return (
-      <div className="w-full max-w-3xl flex flex-row items-center justify-between px-2 mt-20 mb-6">
+      <div className="w-full max-w-3xl flex flex-row items-center justify-between px-2 mt-20 mb-2 md:mb-6 pb-4">
         <Menu as="div" className="relative inline-block text-left">
           <div>
             <Menu.Button className="border border-gray-800 dark:border-neutral-50 rounded-full ml-2 px-2 py-1 text-xs text-gray-900 dark:text-neutral-50 tracking-wide">
