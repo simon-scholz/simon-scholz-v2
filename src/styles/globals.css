@@ -16,6 +16,11 @@
   }
 }
 
+
+
 body {
   background: #ffffff;
+  @media (prefers-color-scheme: dark) {
+    background: #171717;
+  }
 }

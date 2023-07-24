@@ -52,7 +52,7 @@ const WorkRow = ({ data }: IWorkRow) => {
     <div>
       <div
         onClick={() => setIsOpen(true)}
-        className={`flex flex-row justify-start items-start md:items-center gap-6 px-4 py-2 w-full rounded-md hover:bg-slate-50 transition-all hover:transition-all hover:cursor-pointer`}
+        className={`flex flex-row justify-start items-start md:items-center gap-6 px-4 py-2 w-full rounded-md hover:bg-slate-50 dark:hover:bg-neutral-800 transition-all hover:transition-all hover:cursor-pointer`}
       >
         <div className="text-slate-400 font-medium min-w-fit grow-0">
           {parentElement ? (
@@ -108,12 +108,12 @@ const WorkRow = ({ data }: IWorkRow) => {
           className={`flex flex-col md:flex-row justify-start items-start md:items-center gap-0 md:gap-6 w-[calc(100%-2.75rem)]`}
         >
           {!childElement ? (
-            <p className="text-gray-900 font-medium min-w-fit grow-0">
+            <p className="text-gray-900 dark:text-neutral-50 font-medium min-w-fit grow-0">
               {company}
             </p>
           ) : (
             <div className="relative text-slate-400 font-medium min-w-fit grow-0">
-              <p className="text-gray-200 font-medium min-w-fit grow-0">
+              <p className="text-gray-200 dark:text-neutral-700 font-medium min-w-fit grow-0">
                 {company}
               </p>
               {/* <svg
@@ -133,10 +133,10 @@ const WorkRow = ({ data }: IWorkRow) => {
             </div>
           )}
 
-          <p className="invisible h-0 md:h-auto md:visible overflow-hidden text-gray-200 w-full truncate grow">
+          <p className="invisible h-0 md:h-auto md:visible overflow-hidden text-gray-200 dark:text-neutral-700 w-full truncate grow">
             {".".repeat(500)}
           </p>
-          <p className="text-gray-600 min-w-fit grow-0 pt-2 md:pt-0">
+          <p className="text-gray-600 dark:text-neutral-200 min-w-fit grow-0 pt-2 md:pt-0">
             {jobDescription}
           </p>
           {!current ? (
@@ -220,7 +220,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                     {fetchPrev() ? (
                       <button
                         onClick={showPrev}
-                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer"
+                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +246,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                     {fetchNext() && (
                       <button
                         onClick={showNext}
-                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer"
+                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200"
                       >
                         <span className="mr-4 max-w-[80%]">
                           {fetchNext()?.jobDescription} @ {fetchNext()?.company}
