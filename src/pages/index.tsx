@@ -1,18 +1,12 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
-import dynamic from "next/dynamic";
 import WorkRow from '@/components/WorkRow'
 
 const inter = Inter({ subsets: ['latin'] })
 
 import cv from "../data/cv.json"
-const ThemeSwitcher = dynamic(
-  () => import("@/components/ThemeSwitcher"),
-  {
-    ssr: false,
-  }
-);
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -42,9 +36,9 @@ export default function Home() {
       </Head>
 
       <main
-        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 md:p-24 ${inter.className}`}
+        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 md:p-24 md:pb-0 ${inter.className}`}
       >
-        <ThemeSwitcher />          
+             
         
         <div className="flex flex-col items-start w-full max-w-3xl">
           <div className="px-2">
@@ -74,7 +68,7 @@ export default function Home() {
             ))}
           </div>
 
-          <p className="ml-2 bg-gradient-to-r from-amber-400 via-red-500 to-pink-400 rounded-full px-2 py-1 text-xs text-white tracking-wide mb-6  mt-20">
+          <p className="ml-2 bg-gradient-to-r from-amber-400 via-red-500 to-pink-400 rounded-full px-2 py-1 text-xs text-white tracking-wide mb-6 mt-20">
             PERSONAL
           </p>
           <div className="w-full max-w-3xl">
@@ -121,6 +115,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Footer />
       </main>
     </div>
   );

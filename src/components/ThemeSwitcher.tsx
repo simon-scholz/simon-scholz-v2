@@ -42,7 +42,7 @@ const ThemeSwitcher = () => {
     }, [storedTheme]);
 
   return (
-    <button onClick={toggleTheme} className="absolute right-3 top-3 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer">
+    <button onClick={toggleTheme} className="z-10 absolute right-3 top-3 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer">
       {isLight ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
