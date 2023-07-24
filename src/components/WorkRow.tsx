@@ -167,7 +167,7 @@ const WorkRow = ({ data }: IWorkRow) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/40" />
+            <div className="fixed inset-0 bg-black/40 dark:bg-black/80" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -181,10 +181,10 @@ const WorkRow = ({ data }: IWorkRow) => {
                 leaveFrom="translate-y-0 sm:opacity-100 sm:scale-y-100"
                 leaveTo="translate-y-100 sm:opacity-0 sm:scale-y-75"
               >
-                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative">
+                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white dark:bg-neutral-800 p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative">
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="absolute right-3 top-3 p-2 outline-none border-none text-slate-400 rounded-lg hover:bg-slate-50 transition-all hover:transition-all hover:cursor-pointer"
+                    className="absolute right-3 top-3 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -203,15 +203,15 @@ const WorkRow = ({ data }: IWorkRow) => {
                   </button>
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
+                    className="text-lg font-medium leading-6 text-gray-900 dark:text-neutral-50"
                   >
                     {currentDataView.company}
                   </Dialog.Title>
-                  <p className="text-gray-600 min-w-fit grow-0 pt-2 mb-6">
+                  <p className="text-gray-600 dark:text-neutral-200 min-w-fit grow-0 pt-2 mb-6">
                     {currentDataView.jobDescription}
                   </p>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 dark:text-neutral-300">
                       Your payment has been successfully submitted. We've sent
                       you an email with all of the details of your order.
                     </p>
@@ -220,7 +220,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                     {fetchPrev() ? (
                       <button
                         onClick={showPrev}
-                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200"
+                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg bg-slate-100 dark:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +246,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                     {fetchNext() && (
                       <button
                         onClick={showNext}
-                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 rounded-lg bg-slate-100 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200"
+                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg bg-slate-100 dark:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
                       >
                         <span className="mr-4 max-w-[80%]">
                           {fetchNext()?.jobDescription} @ {fetchNext()?.company}

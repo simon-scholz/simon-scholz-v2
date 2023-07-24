@@ -1,11 +1,18 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
+import dynamic from "next/dynamic";
 import WorkRow from '@/components/WorkRow'
 
 const inter = Inter({ subsets: ['latin'] })
 
 import cv from "../data/cv.json"
+const ThemeSwitcher = dynamic(
+  () => import("@/components/ThemeSwitcher"),
+  {
+    ssr: false,
+  }
+);
 
 export default function Home() {
   return (
@@ -34,11 +41,11 @@ export default function Home() {
         ></script>
       </Head>
 
-      <html className="dark"></html>
-
       <main
-        className={`bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 md:p-24 ${inter.className}`}
+        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 md:p-24 ${inter.className}`}
       >
+        <ThemeSwitcher />          
+        
         <div className="flex flex-col items-start w-full max-w-3xl">
           <div className="px-2">
             <h2 className="font-semibold text-gray-900 dark:text-neutral-50">
@@ -79,6 +86,7 @@ export default function Home() {
                 className="w-full"
               >
                 <div className="flex flex-row justify-start gap-8 w-full">
+                  {/* TO-DO: use src="/wonky_small_dark_bg.svg" for dark mode */}
                   <Image
                     src="/wonky_small.svg"
                     width={30}
