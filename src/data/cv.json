@@ -1,14 +1,20 @@
 [
   {
     "company": "360dialog",
-    "jobDescription": "Product Manager",
-    "period": "2020 —  ",
+    "jobDescription": "Product Lead",
+    "period": "2022 —  ",
     "current": true,
     "parentElement": true
   },
   {
     "company": "360dialog",
-    "jobDescription": "UX/UI Engineer & Frontend Team Lead",
+    "jobDescription": "Product Manager",
+    "period": "2021 — 22",
+    "childElement": true
+  },
+  {
+    "company": "360dialog",
+    "jobDescription": "UX/UI Engineer",
     "period": "2020 — 21",
     "childElement": true
   },
@@ -19,7 +25,7 @@
   },
   {
     "company": "Blockrocket",
-    "jobDescription": "Founding Team & Business Development",
+    "jobDescription": "Founding Team",
     "period": "2019 — 20"
   },
   {
