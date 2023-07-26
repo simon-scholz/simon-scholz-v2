@@ -26,7 +26,8 @@
   {
     "company": "Blockrocket",
     "jobDescription": "Founding Team",
-    "period": "2019 — 20"
+    "period": "2019 — 20",
+    "details": "Blockrocket is an accelerator for blockchain startups that offers an exclusive ecosystem to help startups, corporates, and investors to leverage the potential of blockchain technology.\n\nBeing a part of the founding team my functions were mostly related to business development. This included first and foremost the structuring of the investment approach, the dealflow funnel and selection process. Together with the team I worked on acquiring investors as well as startups.\n\nThis project was conducted in the form of a joint venture with our main company CDF Technologies."
   },
   {
     "company": "CDF Technologies",
@@ -37,6 +38,7 @@
   {
     "company": "Audi",
     "jobDescription": "Powertrain Simulation Engineer",
-    "period": "2015 — 18"
+    "period": "2015 — 18",
+    "details": "As one of the world's leading producers of premium cars, the Audi Group and it's main brand Audi stand for sporty vehicles, high build quality and progressive design. One of the core components of this DNA is the powertrain, that Audi has continued to innovate on throughout many years.\n\nDuring my work as a Powertrain Simulation Engineer I was part of a group of engineers tasked with creating a \"digital twin\" for any current and upcoming Audi vehicle. This would allow us to simulate the car's behavior in dynamic driving scenarios way before the first prototype was built.\n\nWith my focus on load collective simulation for gearboxes I could quite quickly establish myself as an expert within the powertrain development division. Especially due to new transient thermal simulation models our group could introduce a new innovative approach to the development process."
   }
 ]

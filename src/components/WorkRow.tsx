@@ -189,7 +189,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                 leaveFrom="translate-y-0 sm:opacity-100 sm:scale-y-100"
                 leaveTo="translate-y-100 sm:opacity-0 sm:scale-y-75"
               >
-                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] h-auto transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white dark:bg-neutral-800 p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative">
+                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white dark:bg-neutral-800 p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative">
                   <button
                     onClick={() => setIsOpen(false)}
                     className="absolute right-3 top-3 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer"
@@ -215,19 +215,21 @@ const WorkRow = ({ data }: IWorkRow) => {
                   >
                     {currentDataView.company}
                   </Dialog.Title>
-                  <p className="text-gray-600 dark:text-neutral-200 min-w-fit grow-0 pt-2 mb-6">
+                  <p className="text-gray-600 dark:text-neutral-200 min-w-fit grow-0 pt-2 mb-2">
                     {currentDataView.jobDescription}
                   </p>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500 dark:text-neutral-300 whitespace-pre-line pb-4 overflow-y-scroll h-96">
+                  <div className="relative">
+                    <p className="text-sm text-gray-500 dark:text-neutral-300 whitespace-pre-line py-4 overflow-y-scroll h-96 mb-2">
                       {currentDataView.details ? currentDataView.details : ""}
                     </p>
+                    <div className="absolute top-0 inset-x-0 bg-gradient-to-t from-transparent to-white dark:to-neutral-800 h-4"></div>
+                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-b from-transparent to-white dark:to-neutral-800 h-6"></div>
                   </div>
-                  <div className="absolute bottom-8 left-8 right-8 flex flex-col sm:flex-row gap-3">
+                  <div className="relative flex flex-col sm:flex-row gap-3">
                     {fetchPrev() ? (
                       <button
                         onClick={showPrev}
-                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg bg-slate-100 dark:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
+                        className="flex flex-row w-full sm:w-1/2 h-16 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg bg-slate-100 dark:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
