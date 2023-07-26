@@ -15,12 +15,18 @@
   {
     "company": "Divizend",
     "jobDescription": "UX/UI Engineer",
-    "period": "2018 — 20"
+    "period": "2019 — 20"
+  },
+  {
+    "company": "Blockrocket",
+    "jobDescription": "Founding Team & Business Development",
+    "period": "2019 — 20"
   },
   {
     "company": "CDF Technologies",
     "jobDescription": "Co-Founder",
-    "period": "2018 — 20"
+    "period": "2018 — 20",
+    "details": "CDF Technologies offers software solutions and consulting to corporates, accelerators and investors to enable the future of data-driven investments.\n\nAs one of three co-founders of CDF Technologies, I took the role as CTO, and therefore was responsible for the product development. From the initial design and development of a minimum viable product, through multiple iterations of improvements, our team successfully shipped multiple products, that effectively helped investors in their day to day work:\n\n\t- The Startup Relationship Management Tool CDF One helps to never lose track of any investment opportunity.\n\n\t- Pitchtable.io is an API solution that transforms startups' pitchdecks to structured datasets through image and text processing combined with natural language processing. This enables clients to feed their CRM, create extensive reports or train machine learning models.\n\nWe were part of the TUM Incubator, LMU EC Accelerator Batch 2019 and the Wayra Startup Accelerator 2020."
   },
   {
     "company": "Audi",

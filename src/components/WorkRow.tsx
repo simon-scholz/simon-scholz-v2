@@ -1,4 +1,4 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 import cv from "../data/cv.json";
@@ -10,6 +10,7 @@ type RowData = {
   current?: boolean;
   childElement?: boolean;
   parentElement?: boolean;
+  details?: string;
 };
 
 interface IWorkRow {
@@ -26,7 +27,12 @@ const WorkRow = ({ data }: IWorkRow) => {
     current,
     childElement,
     parentElement,
+    details
   } = data;
+
+  useEffect(() => {
+    setCurrentDataView(data)
+  }, [isOpen])
 
   const showPrev = () => {
     let currentIdx = cv.findIndex((v) => v === currentDataView);
@@ -183,7 +189,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                 leaveFrom="translate-y-0 sm:opacity-100 sm:scale-y-100"
                 leaveTo="translate-y-100 sm:opacity-0 sm:scale-y-75"
               >
-                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white dark:bg-neutral-800 p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative">
+                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] h-auto transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white dark:bg-neutral-800 p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative">
                   <button
                     onClick={() => setIsOpen(false)}
                     className="absolute right-3 top-3 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer"
@@ -213,9 +219,8 @@ const WorkRow = ({ data }: IWorkRow) => {
                     {currentDataView.jobDescription}
                   </p>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500 dark:text-neutral-300">
-                      Your payment has been successfully submitted. We've sent
-                      you an email with all of the details of your order.
+                    <p className="text-sm text-gray-500 dark:text-neutral-300 whitespace-pre-line pb-4 overflow-y-scroll h-96">
+                      {currentDataView.details ? currentDataView.details : ""}
                     </p>
                   </div>
                   <div className="absolute bottom-8 left-8 right-8 flex flex-col sm:flex-row gap-3">
