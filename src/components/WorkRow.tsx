@@ -191,7 +191,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                 leaveFrom="translate-y-0 sm:opacity-100 sm:scale-y-100"
                 leaveTo="translate-y-100 sm:opacity-0 sm:scale-y-75"
               >
-                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white dark:bg-neutral-800 p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative">
+                <Dialog.Panel className="w-full md:max-w-3xl min-h-[460px] h-[95%] sm:h-auto transform overflow-hidden rounded-t-2xl sm:rounded-2xl bg-white dark:bg-neutral-800 p-12 pb-6 sm:p-12 text-left align-middle shadow-xl transition-all absolute bottom-0 sm:relative flex flex-col">
                   <button
                     onClick={() => setIsOpen(false)}
                     className="absolute right-3 top-3 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer"
@@ -220,8 +220,8 @@ const WorkRow = ({ data }: IWorkRow) => {
                   <p className="text-gray-600 dark:text-neutral-200 min-w-fit grow-0 pt-2 mb-2">
                     {currentDataView.jobDescription}
                   </p>
-                  <div className="relative">
-                    <div className="text-sm text-gray-500 dark:text-neutral-300 whitespace-pre-line pt-4 pb-6 overflow-y-scroll h-96 mb-4">
+                  <div className="relative sm:h-96 overflow-y-scroll">
+                    <div className="text-sm text-gray-500 dark:text-neutral-300 whitespace-pre-line pt-4 pb-6 mb-4 h-full overflow-y-scroll">
                       {currentDataView.companyDetails
                         ? currentDataView.companyDetails
                         : ""}
@@ -233,7 +233,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                     <div className="absolute top-0 inset-x-0 bg-gradient-to-t from-transparent to-white dark:to-neutral-800 h-4"></div>
                     <div className="absolute bottom-0 inset-x-0 bg-gradient-to-b from-transparent to-white dark:to-neutral-800 h-8"></div>
                   </div>
-                  <div className="relative flex flex-col sm:flex-row gap-3">
+                  <div className="relative flex flex-col sm:flex-row gap-3 mt-auto">
                     {fetchPrev() ? (
                       <button
                         onClick={showPrev}
