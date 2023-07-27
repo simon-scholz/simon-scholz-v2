@@ -1,10 +1,6 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import WorkRow from '@/components/WorkRow'
-
-const inter = Inter({ subsets: ['latin'] })
-
 import cv from "../data/cv.json"
 import Footer from '@/components/Footer';
 import { useEffect, useState } from 'react'
@@ -49,7 +45,7 @@ export default function Home() {
       </Head>
 
       <main
-        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 pt-14 md:p-24 md:pb-0 ${inter.className}`}
+        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 pt-14 md:p-24 md:pb-0`}
       >
         <div className="flex flex-col items-start w-full max-w-3xl">
           <div className="px-2">
