@@ -54,12 +54,12 @@ export default function Home() {
         <div className="flex flex-col items-start w-full max-w-3xl">
           <div className="px-2">
             <h2 className="font-semibold text-gray-900 dark:text-neutral-50">
-              Hey, I'm Simon
+              Hey, I&apos;m Simon
             </h2>
             <p className="text-base tracking-normal pt-2 text-gray-900 dark:text-neutral-50">
               I design, build, and ship digital products. Within my 8+ years of
-              experience I've helped bringing products from zero to thousands of
-              users. As a generalist, driven by societal impact and
+              experience I&apos;ve helped bringing products from zero to
+              thousands of users. As a generalist, driven by societal impact and
               technological advancements, I never stop learning.
             </p>
             {/* <p className="text-base tracking-normal pt-2 text-gray-900 dark:text-neutral-50">
