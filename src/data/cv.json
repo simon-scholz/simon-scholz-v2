@@ -4,41 +4,52 @@
     "jobDescription": "Product Lead",
     "period": "2022 —  ",
     "current": true,
-    "parentElement": true
+    "parentElement": true,
+    "companyDetails": "360dialog is a global remote-tech company that has been selected by WhatsApp as one of only a few partners worldwide to exclusively provide access to and develop solutions on top of WhatsApp Business API. It therefore enables companies of all sizes and from all over the world to use WhatsApp for their business.",
+    "jobDetails": "With 360dialog achieving hyper growth both the product and the team are scaling rapidly. More features have to be implemented meaning the complexity of the product increases, while technical debt needs to be kept in check, all while maintaining the speed the company is going at.\n\nIn order to do so I recently led an initiative to split up the product into multiple sub-products. Through hiring and managing a team of product managers, as well as setting up processes for cross-product interactions, the company could keep its pace and increase efficiency.\n\nNowadays my main functionality is to be a key communicator. I need to listen to all stakeholders as well as my team of product managers. I manage expectations and collect requirements across teams, while keeping tabs on the current product release cycles as well as the roadmap and product vision ahead."
   },
   {
     "company": "360dialog",
     "jobDescription": "Product Manager",
     "period": "2021 — 22",
-    "childElement": true
+    "childElement": true,
+    "companyDetails": "360dialog is a global remote-tech company that has been selected by WhatsApp as one of only a few partners worldwide to exclusively provide access to and develop solutions on top of WhatsApp Business API. It therefore enables companies of all sizes and from all over the world to use WhatsApp for their business.",
+    "jobDetails": "Due to my very user-centred approach in my previous role as a UX/UI Engineer and my core understanding of the product and the underlying technology, the move into the role of 360dialog's first Product Manager came quite naturally for me.\n\nInitially my work was mainly focused on establishing processes, that would allow effective product management and provide transparency within the company and towards our partners. I created processes for filling the feature request funnel, maintaining the backlog, scoring and prioritising features and for structuring requirements, as well as the release planning and execution.\n\nThrough maintaining close relationships with all important teams within the company I could quickly establish myself as the main point of contact in terms of product. Furthermore I provided to be a point of contact for our partners, as well as Meta's product teams."
   },
   {
     "company": "360dialog",
     "jobDescription": "UX/UI Engineer",
     "period": "2020 — 21",
-    "childElement": true
+    "childElement": true,
+    "companyDetails": "360dialog is a global remote-tech company that has been selected by WhatsApp as one of only a few partners worldwide to exclusively provide access to and develop solutions on top of WhatsApp Business API. It therefore enables companies of all sizes and from all over the world to use WhatsApp for their business.",
+    "jobDetails": "Joining the company as the first UX/UI Engineer my initial work was in auditing the existing user interface and its design components. I then proceeded to set up a design system and implemented a component library, that was used to re-design the company's user facing web application.\n\nWith the rapid growth of the company my focus shifted towards building and leading a team of frontend engineers. Next to hiring and managing this also included setting up processes and best practices to future-proof the frontend engineering department of the company."
   },
   {
     "company": "Divizend",
     "jobDescription": "UX/UI Engineer",
-    "period": "2019 — 20"
+    "period": "2019 — 20",
+    "companyDetails": "Divizend is a technology company that develops solutions for dividend investments and related tax issues. Its goal is to become the central point of contact for investors on the subject of dividends.",
+    "jobDetails": "Joining the team in its early stages as the first designer, I was responsible for the corporate identity, as well as setting up the design system. Working in the role of UX/UI designer I then contributed to the design of Divizend's first product: the Maximizer.\n\nFor their second product, a financial calendar application, my work included not only the design of the product, but also the frontend implementation. My work helped the Divizend team laying the foundations for a successful product and was concluded once their first products went from zero to their first customers."
   },
   {
     "company": "Blockrocket",
     "jobDescription": "Founding Team",
     "period": "2019 — 20",
-    "details": "Blockrocket is an accelerator for blockchain startups that offers an exclusive ecosystem to help startups, corporates, and investors to leverage the potential of blockchain technology.\n\nBeing a part of the founding team my functions were mostly related to business development. This included first and foremost the structuring of the investment approach, the dealflow funnel and selection process. Together with the team I worked on acquiring investors as well as startups.\n\nThis project was conducted in the form of a joint venture with our main company CDF Technologies."
+    "companyDetails": "Blockrocket is an accelerator for blockchain startups that offers an exclusive ecosystem to help startups, corporates, and investors to leverage the potential of blockchain technology.",
+    "jobDetails": "Being a part of the founding team my functions were mostly related to business development. This included first and foremost the structuring of the investment approach, the dealflow funnel and selection process. Together with the team I worked on acquiring investors as well as startups.\n\nThis project was conducted in the form of a joint venture with our main company CDF Technologies."
   },
   {
     "company": "CDF Technologies",
     "jobDescription": "Co-Founder",
     "period": "2018 — 20",
-    "details": "CDF Technologies offers software solutions and consulting to corporates, accelerators and investors to enable the future of data-driven investments.\n\nAs one of three co-founders of CDF Technologies, I took the role as CTO, and therefore was responsible for the product development. From the initial design and development of a minimum viable product, through multiple iterations of improvements, our team successfully shipped multiple products, that effectively helped investors in their day to day work:\n\n\t- The Startup Relationship Management Tool CDF One helps to never lose track of any investment opportunity.\n\n\t- Pitchtable.io is an API solution that transforms startups' pitchdecks to structured datasets through image and text processing combined with natural language processing. This enables clients to feed their CRM, create extensive reports or train machine learning models.\n\nWe were part of the TUM Incubator, LMU EC Accelerator Batch 2019 and the Wayra Startup Accelerator 2020."
+    "companyDetails": "CDF Technologies offers software solutions and consulting to corporates, accelerators and investors to enable the future of data-driven investments.",
+    "jobDetails": "As one of three co-founders of CDF Technologies, I took the role as CTO, and therefore was responsible for the product development. From the initial design and development of a minimum viable product, through multiple iterations of improvements, our team successfully shipped multiple products, that effectively helped investors in their day to day work:\n\n\t- The Startup Relationship Management Tool CDF One helps to never lose track of any investment opportunity.\n\n\t- Pitchtable.io is an API solution that transforms startups' pitchdecks to structured datasets through image and text processing combined with natural language processing. This enables clients to feed their CRM, create extensive reports or train machine learning models.\n\nWe were part of the TUM Incubator, LMU EC Accelerator Batch 2019 and the Wayra Startup Accelerator 2020."
   },
   {
     "company": "Audi",
     "jobDescription": "Powertrain Simulation Engineer",
     "period": "2015 — 18",
-    "details": "As one of the world's leading producers of premium cars, the Audi Group and it's main brand Audi stand for sporty vehicles, high build quality and progressive design. One of the core components of this DNA is the powertrain, that Audi has continued to innovate on throughout many years.\n\nDuring my work as a Powertrain Simulation Engineer I was part of a group of engineers tasked with creating a \"digital twin\" for any current and upcoming Audi vehicle. This would allow us to simulate the car's behavior in dynamic driving scenarios way before the first prototype was built.\n\nWith my focus on load collective simulation for gearboxes I could quite quickly establish myself as an expert within the powertrain development division. Especially due to new transient thermal simulation models our group could introduce a new innovative approach to the development process."
+    "companyDetails":"As one of the world's leading producers of premium cars, the Audi Group and it's main brand Audi stand for sporty vehicles, high build quality and progressive design. One of the core components of this DNA is the powertrain, that Audi has continued to innovate on throughout many years.",
+    "jobDetails": "During my work as a Powertrain Simulation Engineer I was part of a group of engineers tasked with creating a \"digital twin\" for any current and upcoming Audi vehicle. This would allow us to simulate the car's behavior in dynamic driving scenarios way before the first prototype was built.\n\nWith my focus on load collective simulation for gearboxes I could quite quickly establish myself as an expert within the powertrain development division. Especially due to new transient thermal simulation models our group could introduce a new innovative approach to the development process."
   }
 ]

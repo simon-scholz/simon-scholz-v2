@@ -10,7 +10,8 @@ type RowData = {
   current?: boolean;
   childElement?: boolean;
   parentElement?: boolean;
-  details?: string;
+  companyDetails?: string;
+  jobDetails?: string;
 };
 
 interface IWorkRow {
@@ -27,7 +28,8 @@ const WorkRow = ({ data }: IWorkRow) => {
     current,
     childElement,
     parentElement,
-    details
+    companyDetails,
+    jobDetails
   } = data;
 
   useEffect(() => {
@@ -219,17 +221,23 @@ const WorkRow = ({ data }: IWorkRow) => {
                     {currentDataView.jobDescription}
                   </p>
                   <div className="relative">
-                    <p className="text-sm text-gray-500 dark:text-neutral-300 whitespace-pre-line py-4 overflow-y-scroll h-96 mb-2">
-                      {currentDataView.details ? currentDataView.details : ""}
-                    </p>
+                    <div className="text-sm text-gray-500 dark:text-neutral-300 whitespace-pre-line pt-4 pb-6 overflow-y-scroll h-96 mb-4">
+                      {currentDataView.companyDetails
+                        ? currentDataView.companyDetails
+                        : ""}
+                      <div className="h-px w-full my-6 px-2 bg-gray-200 bg-opacity-70 dark:bg-neutral-700"></div>
+                      {currentDataView.jobDetails
+                        ? currentDataView.jobDetails
+                        : ""}
+                    </div>
                     <div className="absolute top-0 inset-x-0 bg-gradient-to-t from-transparent to-white dark:to-neutral-800 h-4"></div>
-                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-b from-transparent to-white dark:to-neutral-800 h-6"></div>
+                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-b from-transparent to-white dark:to-neutral-800 h-8"></div>
                   </div>
                   <div className="relative flex flex-col sm:flex-row gap-3">
                     {fetchPrev() ? (
                       <button
                         onClick={showPrev}
-                        className="flex flex-row w-full sm:w-1/2 h-16 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg bg-slate-100 dark:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
+                        className="flex flex-row w-full sm:w-1/2 h-auto sm:h-16 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg bg-slate-100 dark:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -255,7 +263,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                     {fetchNext() && (
                       <button
                         onClick={showNext}
-                        className="flex flex-row w-full sm:w-1/2 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg bg-slate-100 dark:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
+                        className="flex flex-row w-full sm:w-1/2 h-auto sm:h-16 items-center justify-center gap-2 p-2 outline-none border-none text-slate-400 dark:text-slate-100 rounded-lg bg-slate-100 dark:bg-neutral-700 transition-all hover:transition-all hover:cursor-pointer hover:text-slate-500 hover:bg-slate-200 dark:hover:text-slate-200 dark:hover:bg-neutral-600"
                       >
                         <span className="mr-4 max-w-[80%]">
                           {fetchNext()?.jobDescription} @ {fetchNext()?.company}
