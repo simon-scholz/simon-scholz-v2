@@ -25,12 +25,12 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Head>
-        <link
+        {/* <link
           rel="preload"
           href="/fonts/JetBrains-Mono/JetBrainsMono-Regular.woff2"
           as="font"
           crossOrigin=""
-        />
+        /> */}
         <title>Simon Scholz</title>
         <meta name="description" content="Simon Scholz - Designer, who codes" />
         <meta name="keywords" content="UX, UI, Product Design, Development" />
