@@ -217,7 +217,7 @@ const WorkRow = ({ data }: IWorkRow) => {
                   <p className="text-gray-600 dark:text-neutral-200 min-w-fit grow-0 pt-2 mb-2">
                     {currentDataView.jobDescription}
                   </p>
-                  <div className="relative sm:h-96 overflow-y-scroll">
+                  <div className="relative sm:h-96 overflow-hidden">
                     <div className="text-sm text-gray-500 dark:text-neutral-300 whitespace-pre-line pt-4 pb-6 mb-4 h-full overflow-y-scroll">
                       {currentDataView.companyDetails
                         ? currentDataView.companyDetails
