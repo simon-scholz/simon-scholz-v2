@@ -21,12 +21,6 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Head>
-        {/* <link
-          rel="preload"
-          href="/fonts/JetBrains-Mono/JetBrainsMono-Regular.woff2"
-          as="font"
-          crossOrigin=""
-        /> */}
         <title>Simon Scholz</title>
         <meta name="description" content="Simon Scholz - Designer, who codes" />
         <meta name="keywords" content="UX, UI, Product Design, Development" />
@@ -45,7 +39,7 @@ export default function Home() {
       </Head>
 
       <main
-        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 pt-14 md:p-24 md:pb-0`}
+        className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 pt-14 md:p-24 md:pb-0 font-sans`}
       >
         <div className="flex flex-col items-start w-full max-w-3xl">
           <div className="px-2">

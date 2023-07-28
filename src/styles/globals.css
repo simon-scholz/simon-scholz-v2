@@ -23,4 +23,5 @@ body {
   @media (prefers-color-scheme: dark) {
     background: #171717;
   }
+  font-family: 'Inter';
 }

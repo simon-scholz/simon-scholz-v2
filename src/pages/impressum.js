@@ -1,14 +1,11 @@
 import { useState } from "react";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ['latin'] })
-
+import {Inter} from "./_app"
 export default function About() {
   const [showGermanOnly, setShowGermanOnly] = useState(false);
 
   return (
     <main
-      className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 md:p-24 md:pb-0 ${inter.className}`}
+      className={`relative bg-white dark:bg-neutral-900 flex min-h-screen flex-col items-center justify-between p-10 md:p-24 md:pb-0 ${Inter.className}`}
     >
       <div className="flex flex-col items-start gap-4 max-w-3xl w-full pb-8">
         <h2 className="text-gray-900 dark:text-neutral-50 text-base font-medium">

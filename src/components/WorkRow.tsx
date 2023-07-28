@@ -1,6 +1,5 @@
 import { useState, Fragment, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-
 import cv from "../data/cv.json";
 
 type RowData = {
@@ -27,9 +26,7 @@ const WorkRow = ({ data }: IWorkRow) => {
     period,
     current,
     childElement,
-    parentElement,
-    companyDetails,
-    jobDetails
+    parentElement
   } = data;
 
   useEffect(() => {
@@ -57,7 +54,7 @@ const WorkRow = ({ data }: IWorkRow) => {
   };
 
   return (
-    <div>
+    <main>
       <div
         onClick={() => setIsOpen(true)}
         className={`flex flex-row justify-start items-start md:items-center gap-6 px-4 py-2 w-full rounded-md hover:bg-slate-50 dark:hover:bg-neutral-800 transition-all hover:transition-all hover:cursor-pointer`}
@@ -291,7 +288,7 @@ const WorkRow = ({ data }: IWorkRow) => {
           </div>
         </Dialog>
       </Transition>
-    </div>
+    </main>
   );
 };
 
