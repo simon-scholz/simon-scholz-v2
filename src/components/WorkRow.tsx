@@ -163,7 +163,7 @@ const WorkRow = ({ data }: IWorkRow) => {
       <Transition show={isOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="relative z-10"
+          className={`relative z-10 ${Inter.className}`}
           onClose={() => setIsOpen(false)}
         >
           <Transition.Child
@@ -178,7 +178,7 @@ const WorkRow = ({ data }: IWorkRow) => {
             <div className="fixed inset-0 bg-black/40 dark:bg-black/80" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto font-sans">
+          <div className={`fixed inset-0 overflow-y-auto ${Inter.className}`}>
             <div className="flex min-h-full items-center justify-center sm:p-4 text-center overflow-hidden">
               <Transition.Child
                 as={Fragment}
