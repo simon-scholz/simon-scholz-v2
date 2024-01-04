@@ -177,7 +177,7 @@ const WorkRow = ({ data }: IWorkRow) => {
             <div className="fixed inset-0 bg-black/40 dark:bg-black/80" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 overflow-y-auto font-sans">
             <div className="flex min-h-full items-center justify-center sm:p-4 text-center overflow-hidden">
               <Transition.Child
                 as={Fragment}
