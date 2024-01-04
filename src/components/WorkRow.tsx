@@ -1,7 +1,7 @@
 import { useState, Fragment, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import cv from "../data/cv.json";
-import { Inter } from "../pages/_app";
+
 
 type RowData = {
   company: string;
